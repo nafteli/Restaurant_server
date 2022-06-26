@@ -1,0 +1,42 @@
+[
+    {
+        "table": "Corner 2",
+        "capacity": 2,
+        "GroupSeqNum": null
+    },
+    {
+        "table": "bar",
+        "capacity": 3,
+        "GroupSeqNum": null
+    },
+    {
+        "table": "Window 1",
+        "capacity": 4,
+        "GroupSeqNum": null
+    },
+    {
+        "table": "Corner 1",
+        "capacity": 5,
+        "GroupSeqNum": null
+    },
+    {
+        "table": "Corner 3",
+        "capacity": 6,
+        "GroupSeqNum": null
+    },
+    {
+        "table": "Corner 2",
+        "capacity": 7,
+        "GroupSeqNum": null
+    },
+    {
+        "table": "bar",
+        "capacity": 8,
+        "GroupSeqNum": null
+    },
+    {
+        "table": "Window 1",
+        "capacity": 9,
+        "GroupSeqNum": null
+    }
+]
