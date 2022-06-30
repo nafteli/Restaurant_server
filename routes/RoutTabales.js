@@ -20,7 +20,7 @@ export const getAllTabals = (req, res) => {
 
 export const getTabelBystatus = (req, res) => {
   // const menubyid = getMenuData().dishes[req.params.id]
-  const tabelBystatus = getTabelData().tablesetup.find(item => item.status == req.params.status) ||
+  const tabelBystatus = getTabelData().find(item => item.GroupSeqNum == req.params.GroupSeqNum) ||
   res.send(tabelBystatus)
 }
 

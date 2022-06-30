@@ -16,15 +16,18 @@ const getQueueData = () => {
 
 export const getAllUsers = (req, res) => {
   const allUsers = getQueueData()
+  console.log(allUsers)
   res.send(allUsers)
 }
 
 export const getUsersByStatus = (req, res) => {
-  const usersbyname = getQueueData()[req.params.status].find(item => item.GroupSeqNo == req.params.status.name) || 
-  usersbyname().status.find(item => item.name == req.params.name) || 
-  getQueueData().status.find(item => item.GroupSeqNo == req.params.name)
-  const userStatus = getQueueData()[req.params.status]
-  res.send(userStatus)
+  const usersbyname = getQueueData().filter(item => item.queue === req.params.status) || 
+  getQueueData().filter(item => item.name == req.params.name) || 
+  getQueueData().filter(item => item.GroupSeqNo == req.params.GroupSeqNo)
+  //const userStatus = getQueueData()[req.params.status]
+  console.log(usersbyname)
+  console.log(req.params.status)
+  res.send(usersbyname)
 }
 // export const getUsersByName = (req, res) =>{
 //   const usersbyname = getQueueData()[req.params.status].find(item => item.GroupSeqNo == req.params.status.name)
