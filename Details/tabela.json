@@ -2,41 +2,46 @@
     {
         "table": "Corner 2",
         "capacity": 2,
-        "GroupSeqNum": null
+        "GroupSeqNum": "2022-07-03T08:08:06.931Z"
     },
     {
-        "table": "bar",
+        "table": "bar3",
         "capacity": 3,
-        "GroupSeqNum": null
+        "GroupSeqNum": "2022-06-30T12:45:07.493Z"
     },
     {
         "table": "Window 1",
         "capacity": 4,
-        "GroupSeqNum": null
+        "GroupSeqNum": "4343"
     },
     {
         "table": "Corner 1",
         "capacity": 5,
-        "GroupSeqNum": null
+        "GroupSeqNum": 6487659
     },
     {
         "table": "Corner 3",
         "capacity": 6,
-        "GroupSeqNum": null
+        "GroupSeqNum": 4343
     },
     {
-        "table": "Corner 2",
+        "table": "Corner 4",
         "capacity": 7,
-        "GroupSeqNum": null
+        "GroupSeqNum": 87678960
     },
     {
-        "table": "bar",
+        "table": "bar8",
         "capacity": 8,
-        "GroupSeqNum": null
+        "GroupSeqNum": 8797908
     },
     {
-        "table": "Window 1",
+        "table": "Window 2",
         "capacity": 9,
-        "GroupSeqNum": null
+        "GroupSeqNum": 1111
+    },
+    {
+        "table": "Window 4",
+        "capacity": 10,
+        "GroupSeqNum": "2022-07-05T07:42:23.919Z"
     }
 ]

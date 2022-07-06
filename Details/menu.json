@@ -1,70 +1,74 @@
-{
-    "dishes": [
-        {
-            "id": 1,
-            "category": "starter",
-            "name": "Gefilte Fish",
-            "price": "3.1"
-        },
-        {
-            "id": 2,
-            "category": "starter",
-            "name": "Chopped Liver",
-            "price": "7"
-        },
-        {
-            "id": 3,
-            "category": "starter",
-            "name": "Egg Salad",
-            "price": "2"
-        },
-        {
-            "id": 4,
-            "category": "Soups",
-            "name": "Chicken Soup",
-            "price": "3"
-        },
-        {
-            "id": 5,
-            "category": "Soups",
-            "name": "Borscht",
-            "price": "2"
-        },
-        {
-            "id": 6,
-            "category": "Main Course",
-            "name": "Schnitzel",
-            "price": "12"
-        },
-        {
-            "id": 7,
-            "category": "Main Course",
-            "name": "Cholent",
-            "price": "12"
-        },
-        {
-            "id": 8,
-            "category": "Main Course",
-            "name": "Laundry Chicken",
-            "price": "2.4"
-        },
-        {
-            "id": 9,
-            "category": "desserts",
-            "name": "Icecream",
-            "price": "5.25"
-        },
-        {
-            "id": 10,
-            "category": "desserts",
-            "name": "Cake",
-            "price": "5.25"
-        },
-        {
-            "id": 11,
-            "category": "desserts",
-            "name": "Fruit Salad",
-            "price": "5.25"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "category": "starter",
+        "name": "Gefilte Fish",
+        "price": "3.1"
+    },
+    {
+        "id": 2,
+        "category": "starter",
+        "name": "Chopped Liver",
+        "price": "7"
+    },
+    {
+        "id": 3,
+        "category": "starter",
+        "name": "Egg Salad",
+        "price": "2"
+    },
+    {
+        "id": 4,
+        "category": "Soups",
+        "name": "Chicken Soup",
+        "price": "3"
+    },
+    {
+        "id": 5,
+        "category": "Soups",
+        "name": "Borscht",
+        "price": "2"
+    },
+    {
+        "id": 6,
+        "category": "Main Course",
+        "name": "Schnitzel",
+        "price": "12"
+    },
+    {
+        "id": 7,
+        "category": "Main Course",
+        "name": "Cholent",
+        "price": "12"
+    },
+    {
+        "id": 8,
+        "category": "Main Course",
+        "name": "Laundry Chicken",
+        "price": "2.4"
+    },
+    {
+        "id": 9,
+        "category": "desserts",
+        "name": "Icecream",
+        "price": "5.25"
+    },
+    {
+        "id": 10,
+        "category": "desserts",
+        "name": "Cake",
+        "price": "5.25"
+    },
+    {
+        "id": 11,
+        "category": "desserts",
+        "name": "Fruit Salad",
+        "price": "5.25"
+    },
+    {
+        "id": 12,
+        "category": "starter",
+        "name": "Salmon",
+        "price": "47.5"
+    }
+]

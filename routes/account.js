@@ -1,12 +1,14 @@
 import express from 'express';
 const router = express.Router();
+import {addDishesToTabele} from '../user_Management/user_Management.js'
 import {getallmenu, getByName} from './Routesmenu.js'
 import {getAllTabals, getTabelBystatus} from './RoutTabales.js'
 import {getAllUsers, 
     getUsersByStatus, 
     createGroup, 
     deleteGroup, 
-    editGroup
+    editGroup,
+    goToPay
 } from './users.js'
 
 
@@ -20,6 +22,8 @@ router.get('/ShowQueue/:status', getUsersByStatus)
 router.post('/createGroup', createGroup)
 router.delete('/deleteGroup/:GroupSeqNo', deleteGroup)
 router.put('/SitByPriority', editGroup)
+router.put('/adddishs', addDishesToTabele)
+//router.put('/gotppay', goToPay())
 
 
 export default router 

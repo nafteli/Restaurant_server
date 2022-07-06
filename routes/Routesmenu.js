@@ -24,9 +24,11 @@ export const getallmenu = (req, res) => {
 
 export const getByName = (req, res) => {
   // const menubyid = getMenuData().dishes[req.params.id]
-  const menuByName = getMenuData().dishes.filter(item => item.category === req.params.name) ||
-  getMenuData().dishes.find(item => item.id == req.params.name)
+  const menuByName = getMenuData().find(item => item.id == req.params.name) 
+  || getMenuData().find(item => item.name === req.params.name) 
+  || getMenuData().filter(item => item.category === req.params.name)
   res.send(menuByName)
+  res.status(200)
   }
 
 // menuRoutes.post('/menu/add', (req, res) => {
