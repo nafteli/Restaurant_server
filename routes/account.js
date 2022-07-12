@@ -22,8 +22,8 @@ router.get('/ShowQueue/:status', getUsersByStatus)
 router.post('/createGroup', createGroup)
 router.delete('/deleteGroup/:GroupSeqNo', deleteGroup)
 router.put('/SitByPriority', editGroup)
-router.put('/adddishs', addDishesToTabele)
-//router.put('/gotppay', goToPay())
+router.put('/adddishs/:GroupSeqNo', addDishesToTabele)
+router.put('/gotppay/:GroupSeqNo', goToPay)
 
 
 export default router 

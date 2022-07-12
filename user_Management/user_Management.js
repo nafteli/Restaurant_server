@@ -31,7 +31,6 @@ const getQueueData = () => {
 
 export const Sortedusers = () => {
   const users = getQueueData()
-  console.log("users:", users)
   const sorted = users.sort((a, b) => b.size - a.size);
   console.log("sorted:", sorted)
   saveQueueData(sorted)
@@ -40,18 +39,27 @@ export const Sortedusers = () => {
 
 export const addDishesToTabele = (req, res) => {
   const alldata = getQueueData()
-  console.log("req.body:", req.body)
-  const userdata = getQueueData().find(item => item.GroupSeqNo == req.body.GroupSeqNo)
-  console.log("userdata:", userdata)
+  const userdata = getQueueData().find(item => item.GroupSeqNo == req.params.GroupSeqNo)
+  const index = alldata.findIndex(object => {return object.GroupSeqNo == req.params.GroupSeqNo})
+  // console.log("req.params.GroupSeqNo:", req.params.GroupSeqNo)
+  // console.log(index)
+  // console.log("userdata:", userdata)
   if (userdata.table != null && userdata.queue === "sitting") {
-    userdata.dishs = []
-    userdata.dishs.push(req.body)
-    console.log(userdata)
+    userdata.dishs = req.body
+    alldata.splice(index, 1, userdata)
+    // console.log(item)
+    saveQueueData(alldata)
+    res.send(`the dish's adding to table: ${userdata.table}`)
   }
-  alldata.push(userdata)
-  saveQueueData(alldata)
+  else {
+  res.status(403)
+  // alldata.push(userdata)
   //console.log(alldata)
-  res.send(`the dish's adding to table: ${userdata.table}`)
+  }
+}
+
+export const goToPay = () => {
+
 }
 
 // const SortedQueue = () => {
@@ -106,7 +114,8 @@ export const Queue = () => {
         console.log(indextabels.GroupSeqNum)
         indexQueue.table = indextabels.table
         indexQueue.queue = "sitting"
-        console.log(indexQueue.table)
+        indexQueue.dishs = {}
+        //console.log(indexQueue.table)
         saveTabelData(tabelstosave)
         saveQueueData(queueusers)
         // break
