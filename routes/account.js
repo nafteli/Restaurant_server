@@ -23,7 +23,7 @@ router.post('/createGroup', createGroup)
 router.delete('/deleteGroup/:GroupSeqNo', deleteGroup)
 router.put('/SitByPriority', editGroup)
 router.put('/adddishs/:GroupSeqNo', addDishesToTabele)
-router.put('/gotppay/:GroupSeqNo', goToPay)
+router.put('/goToPay/:GroupSeqNo', goToPay)
 
 
 export default router 

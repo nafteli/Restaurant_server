@@ -96,16 +96,18 @@ export const goToPay = (req, res) => {
   let total = 0
   // console.log("req.body.GroupSeqNo:", req.params.GroupSeqNo)
   // console.log(Object.keys(GroupToPay.dishs))
-  // console.log(Object.values(GroupToPay.dishs)[1])
+  // console.log(Object.values(GroupToPay.dishs))
   // console.log(menuData[0].price)
-  // total = menuData[0].price*Object.values(GroupToPay.dishs)[0]
-  // console.log(total)
+  total = menuData[0].price*Object.values(GroupToPay.dishs)[0]
+  console.log(total)
   for(let i in menuData){
     let pay = menuData[i].price*Object.values(GroupToPay.dishs)[i]
+    console.log(pay)
     total = total + pay
     console.log(total)
   }
-  res.status(200).send("total")
+  res.send({ success: true, msg: `the total pay is: ${total}`})
+  res.status(200)
 }
 
 export const editOneGroup = (req, res) => {
@@ -125,13 +127,13 @@ export const editOneGroup = (req, res) => {
 
 
 export const deleteGroup = (req, res) => {
-    const groupTodelet = getQueueData().filter(item => item.GroupSeqNo !== req.params.GroupSeqNo)
+    const groupTodele = getQueueData().filter(item => item.GroupSeqNo !== req.params.GroupSeqNo)
     const usersQueue = getQueueData()
     const GroupSeqNo = req.params.GroupSeqNo;
     console.log(GroupSeqNo)
     // usersQueue.queue = groupTodelet
-    console.log(groupTodelet)
-    saveQueueData(groupTodelet);
+    console.log(groupTodele)
+    saveQueueData(groupTodele);
     res.status(400)
     res.send(`the gruop ${GroupSeqNo} is deletd`)
 }
