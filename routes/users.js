@@ -127,13 +127,18 @@ export const editOneGroup = (req, res) => {
 
 
 export const deleteGroup = (req, res) => {
-    const groupTodele = getQueueData().filter(item => item.GroupSeqNo !== req.params.GroupSeqNo)
-    const usersQueue = getQueueData()
-    const GroupSeqNo = req.params.GroupSeqNo;
-    console.log(GroupSeqNo)
-    // usersQueue.queue = groupTodelet
-    console.log(groupTodele)
-    saveQueueData(groupTodele);
-    res.status(400)
-    res.send(`the gruop ${GroupSeqNo} is deletd`)
+    const groupTodele = getQueueData().filter(item => item.GroupSeqNo != req.params.GroupSeqNo)
+    // const gropToDelet = getQueueData().find(item => item.GroupSeqNo == req.params.GroupSeqNo)
+    // if (gropToDelet.table != null && gropToDelet.dishs == undefined){
+    //   saveQueueData(groupTodele)
+    //   res.send(`the gruop ${req.params.GroupSeqNo} is deletd`)
+    // }
+    // else if(gropToDelet.table != null && gropToDelet.dishs != {}){res.status(400)}
+    // else if(gropToDelet.table != null && gropToDelet.dishs == {}){
+    //   saveQueueData(groupTodele)
+    //   res.send(`the gruop ${req.params.GroupSeqNo} is deletd`)
+    // }
+    // console.log(groupTodele)
+    saveQueueData(groupTodele)
+    res.send(`the gruop ${req.params.GroupSeqNo} is deletd`)
 }

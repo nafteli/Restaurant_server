@@ -19,6 +19,7 @@ export const getMenuData = () => {
 
 export const getallmenu = (req, res) => {
   const accounts = getMenuData()
+  console.log(accounts)
   res.send(accounts)
 }
 
